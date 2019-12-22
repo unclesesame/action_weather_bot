@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Get Result'
-        run: bash ./weather.sh
+        run: bash ./weather_forecast.sh
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
@@ -22,6 +22,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Shanghai Weather Report
           body: file://result.html
-          to: guopxu_1989@163.com
+          to: guoxu_1989@163.com
           from: GitHub Actions
           content_type: text/html
